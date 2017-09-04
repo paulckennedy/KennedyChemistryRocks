@@ -17,6 +17,9 @@ module.exports = {
     },{
       test: /\.(png|jpg)$/,
       loader: 'url?limit=25000'
+    },{
+      test: /\.css$/, 
+      loader: "style-loader!css-loader" 
     }]
   },
   resolve: {

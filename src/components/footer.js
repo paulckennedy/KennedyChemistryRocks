@@ -3,7 +3,7 @@ import React from 'react';
 export default (props) => {
     return (
         <div>
-            <footer className="hg__footer">
+            <footer className="hg_footer">
                 <div className="contactus">
                     <h3>Tracy Kennedy MS.</h3>
                     <div clasclassNames="address">
