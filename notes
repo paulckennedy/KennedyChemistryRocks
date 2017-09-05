@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+}
+
+.hg_body {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "navigation main ads"
+                         "footer footer footer";
+    grid-template-columns: 150px 1fr 200px;
+    grid-template-rows: 100px 1fr 30px;
+}
+.hg_header{
+    grid-area:"header";
+    background-color: yellow;
+}
+.hg_navigation{
+    grid-area: "navigation";
+    background-color: red;
+}
+.hg_main{
+    grid-area: "main";
+    background-color: orange;
+}
+.hg_ads{
+    grid-area: "ads";
+    background-color: gray;
+}
+
+.hg_footer {
+    grid-area: "footer";
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: blue;
+}
+
+.contactus{
+    display: flex;
+    grid-auto-flow: row;
+    background-color: pink;
+}
+
+.header{
+    background-color: yellow;
+}

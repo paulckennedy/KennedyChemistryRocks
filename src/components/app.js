@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
+import 'firebase/database';
+
+import { DB_CONFIG } from '../firebase_config';
 //import css from '../style/style.css';
 
 //import Header from './header';
 //import Footer from './footer';
 
 export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.app = firebase.initializeApp(DB_CONFIG);
+    this.db = this.app.database().ref().child('Chemistry');
+
+// We're going to setup the React state of our component;
+    this.state = {
+      notes: [],
+    }
+  }
+
   render() {
     return (
       <div className="hg_body">     
-        <div className="hg_header navbar">
+        <div className="header navbar">
           <img src = {require('../img/1_Primary_logo_on_transparent_422x59.png')} />
         </div>
         <div className='hg_navigation' >Navigation</div>
